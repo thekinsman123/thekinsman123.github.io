@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Event Registration</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  margin: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Online Event Registration System</h1>
+  </header>
+  
+  <main>
+    <form id="registration-form">
+      <h2>Event Registration</h2>
+      
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="event">Event:</label>
+        <select id="event" name="event" required>
+          <option value="event1">Event 1</option>
+          <option value="event2">Event 2</option>
+          <option value="event3">Event 3</option>
+        </select>
+      </div>
+      
+      <button type="submit">Register</button>
+    </form>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Online Event Registration System. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js">
+    document.getElementById("registration-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Retrieve form values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var event = document.getElementById("event").value;
+
+  // Perform registration logic
+  // You can send the form data to a server using AJAX or perform other operations here
+
+  // Show a success message
+  alert("Registration successful!");
+
+  // Reset the form
+  document.getElementById("registration-form").reset();
+});
+
+  </script>
+</body>
+</html>
